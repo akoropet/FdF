@@ -6,11 +6,11 @@
 /*   By: akoropet <akoropet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/27 18:03:49 by akoropet          #+#    #+#             */
-/*   Updated: 2019/03/27 20:21:40 by akoropet         ###   ########.fr       */
+/*   Updated: 2019/09/17 19:30:24 by akoropet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fdf.h"
+#include "../include/fdf.h"
 
 void	key_scale(int key, t_fdf *fdf)
 {

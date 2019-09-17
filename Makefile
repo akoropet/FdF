@@ -6,39 +6,55 @@
 #    By: akoropet <akoropet@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/07 22:00:39 by akoropet          #+#    #+#              #
-#    Updated: 2019/03/27 20:04:49 by akoropet         ###   ########.fr        #
+#    Updated: 2019/09/17 19:31:53 by akoropet         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = fdf
+NAME =		fdf
 
-SRC = main.c parcer.c map.c image.c color.c move_scale.c key.c
+SRC_DIR = 	./source/
+OBJ_DIR = 	./objective/
+INC_DIR = 	./include/
 
-LIB = ./lib/lib.a
+SRC = 		main.c \
+			parcer.c \
+			map.c \
+			image.c \
+			color.c \
+			move_scale.c \
+			key.c
 
-OB = $(SRC:.c=.o)
+LIB = 		./lib/lib.a
 
-FLAGS = -Wall -Werror -Wextra
+OBJ = 		$(addprefix $(OBJ_DIR), $(SRC:.c=.o))
+
+FLAGS = 	-Wall -Werror -Wextra
 
 all: $(NAME)
 
-$(NAME): $(OB)
+$(NAME): $(OBJ)
 	@make -C lib
 	@make -C minilibx_macos
-	@gcc $(FLAGS) -lmlx $(SRC) -framework OpenGL -framework AppKit $(LIB) -o $(NAME)
-	@echo ">>>fdf done<<"
+	@gcc $(FLAGS) -lmlx $(addprefix $(SRC_DIR), $(SRC)) -framework OpenGL -framework AppKit $(LIB) -o $(NAME)
+	@echo "\033[92m>>>fdf compiled<<<\033[0m"
 
-%.o : %.c
-	@gcc $(FLAGS) -c -o  $@ $<
+$(OBJ_DIR)%.o: $(SRC_DIR)%.c
+	@gcc $(FLAGS) -c $< -o $@ -I $(INC_DIR)
+
+$(OBJ): | $(OBJ_DIR)
+
+$(OBJ_DIR):
+	@mkdir $(OBJ_DIR)
 
 clean:
 	@make clean -C lib
 	@make clean -C minilibx_macos
-	@rm -f $(OB)
+	@rm -f $(OBJ)
 
 fclean: clean
 	@make fclean -C lib
 	@make clean -C minilibx_macos
+	@rm -rf $(OBJ_DIR)
 	@rm -f $(NAME)
 
 re: fclean all
@@ -57,3 +73,5 @@ window:
 
 pixel:
 	man /usr/share/man/man3/mlx_pixel_put.1
+
+vpath %.c $(SRC_DIR)

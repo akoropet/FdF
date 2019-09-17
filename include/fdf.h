@@ -6,15 +6,15 @@
 /*   By: akoropet <akoropet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/22 16:06:15 by akoropet          #+#    #+#             */
-/*   Updated: 2019/03/27 20:04:54 by akoropet         ###   ########.fr       */
+/*   Updated: 2019/09/17 19:29:11 by akoropet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FDF_H
 # define FDF_H
 
-# include "./lib/libft/libft.h"
-# include "minilibx_macos/mlx.h"
+# include "../lib/libft/libft.h"
+# include "../minilibx_macos/mlx.h"
 # include <math.h>
 
 # define WIN_X 1000

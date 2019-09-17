@@ -6,11 +6,11 @@
 /*   By: akoropet <akoropet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/27 17:55:49 by akoropet          #+#    #+#             */
-/*   Updated: 2019/03/27 18:30:55 by akoropet         ###   ########.fr       */
+/*   Updated: 2019/09/17 19:30:20 by akoropet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fdf.h"
+#include "../include/fdf.h"
 
 void	perspectiv(t_fdf *fdf)
 {

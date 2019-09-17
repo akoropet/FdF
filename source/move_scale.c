@@ -6,11 +6,11 @@
 /*   By: akoropet <akoropet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/27 18:01:23 by akoropet          #+#    #+#             */
-/*   Updated: 2019/03/27 18:03:12 by akoropet         ###   ########.fr       */
+/*   Updated: 2019/09/17 19:30:33 by akoropet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fdf.h"
+#include "../include/fdf.h"
 
 void	scale(t_fdf *fdf)
 {

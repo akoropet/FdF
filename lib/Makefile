@@ -6,7 +6,7 @@
 #    By: akoropet <akoropet@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/18 14:52:04 by akoropet          #+#    #+#              #
-#    Updated: 2019/03/25 19:31:35 by akoropet         ###   ########.fr        #
+#    Updated: 2019/09/17 19:29:49 by akoropet         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@ar rcs $(NAME) $(OBJ)
-	@echo ">>>lib done<<"
+	@echo "\033[93m>>>lib done<<<\033[0m"
 
 %.o : %.c
 	@gcc $(FLAGS) -c -o  $@ $<

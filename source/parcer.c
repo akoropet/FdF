@@ -6,11 +6,11 @@
 /*   By: akoropet <akoropet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/23 15:51:08 by akoropet          #+#    #+#             */
-/*   Updated: 2019/03/27 20:00:36 by akoropet         ###   ########.fr       */
+/*   Updated: 2019/09/17 19:30:36 by akoropet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fdf.h"
+#include "../include/fdf.h"
 
 char	*join_to_buf(char *buf, char *str)
 {

@@ -6,11 +6,11 @@
 /*   By: akoropet <akoropet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/22 16:13:07 by akoropet          #+#    #+#             */
-/*   Updated: 2019/03/27 19:49:58 by akoropet         ###   ########.fr       */
+/*   Updated: 2019/09/17 19:30:27 by akoropet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fdf.h"
+#include "../include/fdf.h"
 
 void	reset(t_fdf *fdf)
 {
